@@ -1,16 +1,19 @@
-<html>
-    <head>
-        <title>Succesfully Completed the Register Page</title>
-    </head>
-    <body>
-        <h1><b>Succesfully Completed the Register Page</b></h1>
-        <style>
-            body{
-                background-color: cadetblue;
-            }
-            h1{
-                background-color: rgb(240, 233, 140);
-            }
-        </style>
-    </body>
-</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+    <div class="page-wrap success-wrap">
+        <div class="success-card">
+            <h1>{{ title }}</h1>
+            <p>{{ message }}</p>
+            <a class="secondary-button" href="{{ url_for('login') }}">Go to Login</a>
+            <a class="secondary-button" href="{{ url_for('register') }}">Back to Register</a>
+        </div>
+    </div>
+</body>
+</html> 
